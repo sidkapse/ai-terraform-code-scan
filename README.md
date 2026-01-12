@@ -17,7 +17,7 @@ Place the following files in your repository root:
 
 ### 3. CI/CD Environment
 Add the following:
-- `AWS_ROLE_ARN`: The IAM Role for the runner (must have Bedrock & S3 permissions).
+- `AWS_ROLE_ARN`: The IAM Role for the runner (must have Bedrock & S3 permissions). [NON-AWS-SERVICES]
 - `SCAN_RESULTS_BUCKET`: The name of the S3 bucket to store reports.
 
 ## 🛠 Usage
@@ -25,7 +25,7 @@ The scanner runs automatically on every Pull Request. To run it manually:
 ```bash
 pip install -r requirements.txt
 python tf-code-scanner.py --bucket your-s3-bucket-name
-Note: If bucket name is not provided than a file with current datetime will be saved at the root.
+Note: If bucket name is not provided than a file with current datetime will be saved at the present working directory.
 
 ## Usage To implement a professional security posture, you should avoid long-lived IAM Access Keys. Instead, use Identity Federation for external services (GitHub/GitLab) and Service Roles for AWS-native services.
 
