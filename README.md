@@ -1,7 +1,7 @@
 # AI Terraform Security Scanner
 
 
-A professional CI/CD integration that combines **Terrascan**'s static analysis with **Amazon Bedrock (Claude 3.5)** for intelligent security insights.
+A professional CI/CD integration that combines **Terrascan**'s static analysis with **Amazon Bedrock** for intelligent security insights.
 
 ## 🚀 Setup & Prerequisites
 
