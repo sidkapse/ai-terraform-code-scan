@@ -20,9 +20,15 @@ Add the following:
 - `AWS_ROLE_ARN`: The IAM Role for the runner (must have Bedrock & S3 permissions). [NON-AWS-SERVICES]
 - `SCAN_RESULTS_BUCKET`: The name of the S3 bucket to store reports.
 
-## 🛠 Usage
-The scanner runs automatically on every Pull Request. To run it manually:
+## 🛠 Usage inside CICD Pipeline code
+The scanner runs automatically on every Pull Request and can also run it manually in local machine:
 ```bash
+##Install Terrascan
+curl -L "$(curl -s https://api.github.com/repos/tenable/terrascan/releases/latest | grep -o -E "https://.+?_Darwin_x86_64.tar.gz")" > terrascan.tar.gz
+tar -xf terrascan.tar.gz terrascan && rm terrascan.tar.gz
+install terrascan /usr/local/bin && rm terrascan
+terrascan version
+
 pip install -r requirements.txt
 python tf-code-scanner.py --bucket your-s3-bucket-name
 Note: If bucket name is not provided than a file with current datetime will be saved at the present working directory.
