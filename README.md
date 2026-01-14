@@ -7,7 +7,7 @@ A professional CI/CD integration that combines **Terrascan**'s static analysis w
 
 ### 1. Local Requirements
 - **Python 3.10+**
-- **Terrascan CLI:** [Install guide](https://runterrascan.io/docs/install/)
+- **Terrascan CLI:** [Install guide](https://runterrascan.io/docs/getting-started/#installing-terrascan)
 - **AWS CLI:** Configured with access to Bedrock and S3.
 
 ### 2. Repository Setup
